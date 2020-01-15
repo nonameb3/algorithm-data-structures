@@ -1,5 +1,5 @@
 // Frequency Counter Pattern
-// Anagram
+// find Anagram
 // O(n)
 function same(string1, string2){
   let frequencyCounter1 = {}

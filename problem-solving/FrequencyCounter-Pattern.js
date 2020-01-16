@@ -1,28 +1,33 @@
 // Frequency Counter Pattern
 // find Anagram
-// O(n)
-function same(string1, string2){
-  let frequencyCounter1 = {}
-  let frequencyCounter2 = {}
+// O(n) time complexity
+// O(n) space complexity
+function same(string1, string2) {
+  let frequencyCounter1 = {};
+  let frequencyCounter2 = {};
 
-  if(string1.length &&(string1 === string2) ) {
+  if (string1.length && string1 === string2) {
     return false;
   }
-  for(let val of string1){
-      frequencyCounter1[val] ? frequencyCounter1[val] += 1 : frequencyCounter1[val] = 1 
-     }
-  for(let val of string2){
-      frequencyCounter2[val] ? frequencyCounter2[val] += 1 : frequencyCounter2[val] = 1 
+  for (let val of string1) {
+    frequencyCounter1[val]
+      ? (frequencyCounter1[val] += 1)
+      : (frequencyCounter1[val] = 1);
   }
-  for(let key in frequencyCounter1){
-      if(!(key in frequencyCounter2)){
-          return false
-      }
-      if(frequencyCounter2[key] !== frequencyCounter1[key]){
-          return false
-      }
+  for (let val of string2) {
+    frequencyCounter2[val]
+      ? (frequencyCounter2[val] += 1)
+      : (frequencyCounter2[val] = 1);
   }
-  return true
+  for (let key in frequencyCounter1) {
+    if (!(key in frequencyCounter2)) {
+      return false;
+    }
+    if (frequencyCounter2[key] !== frequencyCounter1[key]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 console.log(same('', '')) // true

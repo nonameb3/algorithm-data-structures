@@ -1,3 +1,6 @@
+// Slide Window Pattren
+// O(n) time complexity
+// O(1) space complexity
 function maxSubarraySum(arr=[], num) {
   if(num > arr.length) return null;
   

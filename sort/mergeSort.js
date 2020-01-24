@@ -1,3 +1,5 @@
+// O(n log (n)) time complexity
+// O(n) space complexity
 function merge(arr1, arr2) {
   const checkLength = (arr, index) => arr.length > index;
   let result = [];

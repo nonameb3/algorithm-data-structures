@@ -1,3 +1,5 @@
+// O(log (n)) time complexity
+// O(1) space complexity
 function binarySearch(arr = [], value) {
   let start = 0;
   let end = arr.length - 1;

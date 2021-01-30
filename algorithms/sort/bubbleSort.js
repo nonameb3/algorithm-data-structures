@@ -1,23 +1,17 @@
 // O(n^2) time complexity
 // O(1) space complexity
-function bubbleSort(arr) {
-  let i = 0;
-  let j = 1;
-
-  for (let index = 0; index < arr.length; index++) {
-    while (i < arr.length && j <= arr.length) {
-      if (arr[j] < arr[i]) {
-        const temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+function bubbleSort(a) {
+  for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < a.length - 1; j++) {
+      if (a[j] > a[j + 1]) {
+        const temp = a[j + 1];
+        a[j + 1] = a[j];
+        a[j] = temp;
+        swap++;
       }
-      i++;
-      j++;
     }
-    i = 0;
-    j = 1;
   }
-  return arr;
+  return a;
 }
 
 console.log(bubbleSort([1, 10, 50, 2, 14, 99, 100])); // [1,2,10,14,50,99,100]
